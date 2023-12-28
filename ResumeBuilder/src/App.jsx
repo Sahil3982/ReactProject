@@ -1,20 +1,22 @@
 import { Home } from "./Home"
+import { Footer } from "./components/Footer"
+import { Sidebar } from "./components/sideBar"
+import "./App.css";
 
-import {sideBar} from "./components/sideBar"
 function App() {
 
   return (
     <>
       <div>
-        <div className="grid grid-clos-12">
-          <section className="bg-gray-400">
-            <sideBar />
+        <div className="div">
+          <section className="sidebar">
+            <Sidebar/>
           </section>
-          <main>
+          <main className="main">
             <Home />
           </main>
         </div>
-        <Footer />
+        <Footer/>
       </div>
     </>
   )

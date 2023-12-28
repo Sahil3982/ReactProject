@@ -1,6 +1,13 @@
-
-export const navBar = () => {
+import React from 'react'
+export const Sidebar = () => {
   return (
-    <div>navBar</div>
+    <>
+    <main>
+      <div className='sahil'></div>
+      <div>s</div>
+      <div>w</div>
+      <div>y</div>
+    </main>
+    </>
   )
 }

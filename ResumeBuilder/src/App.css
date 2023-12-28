@@ -1,0 +1,23 @@
+.div{
+    display: flex;
+}
+.sidebar{
+    background-color: rgb(154, 246, 243);
+    width: 20%;
+    border: 2px solid black;
+
+}
+.main{
+    background-color: rgb(231, 231, 211);
+    height: 200px;
+    width: 78%;
+    border: 2px solid black;
+
+}
+.sahil{
+    border: 2px solid black;
+    background-image: url(./assets/sahil.jpg);    
+    width: 100px;
+    height: 100px;
+    
+}

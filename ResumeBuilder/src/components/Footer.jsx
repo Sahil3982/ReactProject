@@ -1,6 +1,6 @@
 
-export const mainPage = () => {
+export const Footer = () => {
   return (
-    <div>mainPage</div>
+    <div>Footer</div>
   )
 }
