@@ -1,12 +1,16 @@
-import Header from "../Components/Header/Header"
 import React from "react"
+
+import Footer from "../Components/Footer/Footer"
 function App() {
 
   return (
-    <>
-    <h1>My</h1>
-      <Header />
-    </>
+  
+  <>
+  <Main
+    <Footer />
+  </>
+  
+  
   )
 }
 
