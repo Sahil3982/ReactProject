@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="alphabet" ></h1>
+</body>
+<script>
+    const alphabet = document.getElementById('alphabet')
+    let char = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890abcdefghijklmnopqrstuvwxyz!@#$%^&*()_+:{}+-=[]/.,;"
+console.log(char.length);
+    const changeChar = ()=>{
+        alphabet.textContent = char[Math.floor(Math.random()*100)];
+
+    }
+
+    setInterval(changeChar,1000)
+
+</script>
+</html>
