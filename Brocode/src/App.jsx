@@ -1,11 +1,12 @@
 import Card from "./Card.jsx"
-
+import ListRendering from './Components/ListRendering.jsx'
 
 function App() {
 
   return (
     <>
-<Card  age= {67} isStudent={false}/>
+      {/* <Card  age= {67} isStudent={false}/> */}
+      <ListRendering />
 
       
     </>
