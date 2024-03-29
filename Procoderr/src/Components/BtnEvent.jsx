@@ -1,12 +1,29 @@
-import React from 'react'
-
-const BtnEvent = ({onCliclBtn}) => {
-  return (
-    <>
-        <button onCliclBtn = {()=>{ console.log("Clicked 1 btn")}}>Click1</button>
-        <button  onCliclBtn = {()=>{ console.log("Clicked 2 btn")}}>Click2</button>
-    </>
-  )
+import React from 'react';
+let leftvar = 0;
+let rightvar = 10;
+const GenerateLeft = () => {
+  leftvar++;
+  rightvar--;
+  console.log(rightvar);
+  console.log(leftvar);
+}
+const GenerateRight = () => {
+  leftvar--;
+  rightvar++;
+  console.log(rightvar);
+  console.log(leftvar);
 }
 
-export default BtnEvent
+
+const BtnEvent = () => {
+  return (
+    <>
+      <span>{leftvar}</span>
+      <button onClick={GenerateLeft}><span> --^</span></button>
+      <button onClick={GenerateRight}><span> ^--</span></button>
+      <span>{rightvar}</span>
+    </>
+  );
+};
+
+export default BtnEvent;
