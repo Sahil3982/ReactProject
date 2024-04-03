@@ -21,7 +21,7 @@ const BtnEvent = () => {
       <span>{leftvar}</span>
       <button onClick={GenerateLeft}><span> --^</span></button>
       <button onClick={GenerateRight}><span> ^--</span></button>
-      <span>{rightvar}</span>
+      <span>{rightvar} if(rightvar == )</span>
     </>
   );
 };

@@ -6,8 +6,8 @@ function App() {
 
   return (
     <>
-      {/* <BtnEvent /> */}
-      <Counter />
+      <BtnEvent />
+      {/* <Counter /> */}
     </>
   )
 }
