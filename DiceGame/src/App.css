@@ -1,0 +1,9 @@
+.my-button {
+  background-color: transparent; /* Default background color */
+  border: 1px solid black; /* Default border */
+}
+
+.my-button:active {
+  background-color: black; /* Apply background color on :active state */
+  color: white;
+}
