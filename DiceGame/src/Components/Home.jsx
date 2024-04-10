@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Dice from '../assets/dice.png'
 
 const Home = () => {
@@ -9,7 +10,7 @@ const Home = () => {
         </article>
         <article>
             <div ><span style={{fontSize : '80px', fontWeight:'20px'}} >DICE GAME</span></div>
-            <button style={{backgroundColor :'Black', color:'white', float : 'right' ,  padding:'10px', paddingLeft : '30px' ,paddingRight : '30px'}}>Play Now</button>
+           <Link to='/game' > <button style={{backgroundColor :'Black', color:'white', float : 'right' ,  padding:'10px', paddingLeft : '30px' ,paddingRight : '30px'}}>Play Now</button></Link>
         </article>
     </section>
     </>
