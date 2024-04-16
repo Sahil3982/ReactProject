@@ -1,10 +1,20 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 const ExpenseForm = ({ setExpenses }) => {
-  const [expense, setExpense] = useState({
-    title: "",
-    category: "",
-    amount: "",
-  });
+
+    // UseRef
+
+    const titleRef = useRef(null)
+    const categoryRef = useRef(null)
+    const amountRef = useRef(null)
+
+
+
+
+  // const [expense, setExpense] = useState({
+  //   title: "",
+  //   category: "",
+  //   amount: "",
+  // });
 
   // const [title, setTitle] = useState("");
   // const [category, setCategory] = useState("");
@@ -18,16 +28,27 @@ const ExpenseForm = ({ setExpenses }) => {
     //   category,
     //   amount,
     // };
+    setExpenses((prevState)=>[...prevState , {
+      title : titleRef.current.value,
+      category : categoryRef.current.value,
+      amount : amountRef.current.value,
+      id : crypto.randomUUID()
 
-    setExpenses((prevState) => [...prevState,{...expense , id : crypto.randomUUID()}]);
+    }])
+
+    // console.log(titleRef.current.value);
+    // console.log(categoryRef.current.value);
+    // console.log(amountRef.current.value);
+
+    // setExpenses((prevState) => [...prevState,{...expense , id : crypto.randomUUID()}]);
     // setAmount("");
     // setCategory("");
-    // setTitle("");
-    setExpense({
-      title: "",
-      category: "",
-      amount: "",
-    })
+    // // setTitle("");
+    // setExpenses({
+    //   title: "",
+    //   category: "",
+    //   amount: "",
+    // })
 
     // const expense = {...getFormData(e.target),id : crypto.randomUUID()}
     // setExpenses((prevState) =>
@@ -51,10 +72,11 @@ const ExpenseForm = ({ setExpenses }) => {
           <input
             id="title"
             name="title"
-            value={expense.title}
-            onChange={(e) => {
-              setExpense((prevState)=>({...prevState, title : e.target.value}));
-            }}
+            // value={expense.title}
+            ref={titleRef}
+            // onChange={(e) => {
+            //   setExpense((prevState)=>({...prevState, title : e.target.value}));
+            // }}
           />
         </div>
         <div className="input-container">
@@ -62,10 +84,11 @@ const ExpenseForm = ({ setExpenses }) => {
           <select
             className="item-category"
             name="category"
-            value={expense.category}
-            onChange={(e) => {
-              setExpense((prevState)=>({ ...prevState ,category : e.target.value}));
-            }}
+            ref={categoryRef}
+            // value={expense.category}
+            // onChange={(e) => {
+            //   setExpense((prevState)=>({ ...prevState ,category : e.target.value}));
+            // }}
           >
             <option hidden>Select Category</option>
             <option value="grocery">Grocery</option>
@@ -80,10 +103,11 @@ const ExpenseForm = ({ setExpenses }) => {
           <input
             id="amount"
             name="amount"
-            value={expense.amount}
-            onChange={(e) => {
-              setExpense( (prevState)=>({...prevState , amount: e.target.value}));
-            }}
+            ref={amountRef}
+            // value={expense.amount}
+            // onChange={(e) => {
+            //   setExpense( (prevState)=>({...prevState , amount: e.target.value}));
+            // }}
           />
         </div>
         <button className="add-btn">Add</button>
