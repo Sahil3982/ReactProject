@@ -4,6 +4,19 @@ const ExpenceTable = ({ expenses }) => {
   // if (!Array.isArray(expenses)) {
   //   return <p>No expenses to display</p>;
   // }
+console.log(  expenses[1].amount);
+let sum = 0;
+
+for(let i=0 ; i < expenses.length; i++){
+      sum = sum + expenses[i].amount;
+}
+console.log(sum);
+
+const filterCategory = ()=>{
+  expenses.filter((data)=>{
+      data.includes('')
+  })
+}
   return (
     <table className="expense-table">
       <thead>
@@ -57,8 +70,7 @@ const ExpenceTable = ({ expenses }) => {
         <tr>
           <th>Total</th>
           <th></th>
-          {/* This value should be calculated dynamically */}
-          <th>₹8100</th>
+          <th>{sum}</th>
         </tr>
       </tbody>
     </table>

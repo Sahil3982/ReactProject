@@ -35,7 +35,7 @@ const ExpenseForm = ({ setExpenses }) => {
             <option value="bills">Bills</option>
             <option value="education">Education</option>
             <option value="medicine">Medicine</option>
-          </select>{" "}
+          </select>
         </div>
         <div className="input-container">
           <label htmlFor="amount">Amount</label>
