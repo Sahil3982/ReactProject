@@ -2,7 +2,6 @@ import React from "react";
 
 const ExpenceTable = ({ expenses }) => {
   
-console.log(  expenses[1].amount);
 let sum = 0;
 
 for(let i=0 ; i < expenses.length; i++){
