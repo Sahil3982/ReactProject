@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import Input from "./Input";
 
 const ExpenseForm = ({ setExpenses }) => {
   const [expense, setExpense] = useState({
@@ -56,16 +57,8 @@ const ExpenseForm = ({ setExpenses }) => {
   return (
     <div>
       <form className="expense-form" onSubmit={handleSubmit}>
-        <div className="input-container">
-          <label htmlFor="title">Title</label>
-          <input
-            id="title"
-            name="title"
-            value={expense.title}
-            onChange={handleChange}
-          />
-          <span className="error">{error.title}</span>
-        </div>
+        
+        <Input />
         <div className="input-container">
           <label htmlFor="category">Category</label>
           <select
